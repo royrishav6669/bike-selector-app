@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorbike Selection</title>
+    
+    <!-- Load Tailwind CSS FIRST to ensure styling is applied immediately -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+            min-height: 100vh;
+        }
+        /* Ensures the grid wraps nicely on smaller screens */
+        @media (min-width: 768px) {
+            #selector-images {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+        .bike-link {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+            text-align: center; /* Ensures content inside link is centered */
+        }
+        .bike-link:hover {
+            transform: scale(1.03);
+        }
+        .bike-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            transition: box-shadow 0.2s ease-in-out;
+        }
+        .bike-link:hover .bike-image {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Styling for the Logo image */
+        .bike-logo {
+            /* Sets a maximum height to keep the logos from being too large */
+            max-height: 40px; 
+            width: auto;
+            margin-top: 0.5rem; /* Space between bike image and logo */
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 flex flex-col items-center justify-center">
+
+    <div class="max-w-4xl w-full bg-white p-6 md:p-10 rounded-2xl shadow-2xl">
+        <!-- Header: Updated main text --><header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 border-b-2 pb-3 mb-2 border-indigo-100">
+                Select your Super Bike...
+            </h1>
+        </header>
+
+        <!-- Motorbike Selection Images --><div id="selector-images" class="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
+
+            <!-- Option 1: SP160 - Image Button --><a href="https://vinayakhonda.in/sp-160/" target="_blank" class="bike-link">
+                <!-- Main Bike Image -->
+                <img src="SP160.jpg" 
+                     alt="Honda SP160" class="bike-image" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/300x200/4F46E5/FFFFFF?text=Image+Missing'">
+                
+                <!-- Model Logo (PNG) -->
+                <img src="SP160_Logo.png" 
+                     alt="SP160 Logo" class="bike-logo"
+                     onerror="this.onerror=null; this.src='https://placehold.co/100x30/1f2937/FFFFFF?text=SP160'">
+            </a>
+
+            <!-- Option 2: Hornet 2.0 - Image Button --><a href="https://vinayakhonda.in/honda-hornet-2-bs-vi/" target="_blank" class="bike-link">
+                <!-- Main Bike Image -->
+                <img src="Hornet 2.0.jpg" 
+                     alt="Honda Hornet 2.0" class="bike-image" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/300x200/EF4444/FFFFFF?text=Image+Missing'">
+                
+                <!-- Model Logo (PNG) -->
+                <img src="Hornet_2.0_Logo.png" 
+                     alt="Hornet 2.0 Logo" class="bike-logo"
+                     onerror="this.onerror=null; this.src='https://placehold.co/100x30/1f2937/FFFFFF?text=Hornet 2.0'">
+            </a>
+
+            <!-- Option 3: NX200 - Image Button --><a href="https://vinayakhonda.in/nx200/" target="_blank" class="bike-link">
+                <!-- Main Bike Image -->
+                <img src="NX200.jpg" 
+                     alt="Honda NX200" class="bike-image" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/300x200/10B981/FFFFFF?text=Image+Missing'">
+                
+                <!-- Model Logo (PNG) -->
+                <img src="NX200_Logo.png" 
+                     alt="NX200 Logo" class="bike-logo"
+                     onerror="this.onerror=null; this.src='https://placehold.co/100x30/1f2937/FFFFFF?text=NX200'">
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
